@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TestTask.HashData;
+using TestTask.GeometricFigure;
 
 namespace TestTask
 {
@@ -8,10 +10,24 @@ namespace TestTask
     {
         static void Main(string[] args)
         {
+            int[,] testArray = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-            ApplicationContactsDirectory applicationContactsDirectory = new ApplicationContactsDirectory();
-            applicationContactsDirectory.ApplicationStart();
+            Console.WriteLine("Сумма чисел главной диагонали = " + new TaskOne().MainSequenceSum(testArray));
+            Console.WriteLine("Сумма чисел кратных 3 = " + new TaskOne().MultipeOfThree(testArray));
+            Console.WriteLine("Фибоначи = " + new TaskTwo().Fibonachi(14));
+            Console.WriteLine("Степень = " + new TaskTwo().Power(12, 5));
             Console.Read();
+
+            ///<summary>
+            ///applicationContactsDirectory - 3е задание телефонный справочник с хешированием
+            ///applicationFigure - 4е задание проверка геометрических фигур
+            ///раскомментить нужное для запуска
+
+            //ApplicationContactsDirectory applicationContactsDirectory = new ApplicationContactsDirectory();
+            //applicationContactsDirectory.ApplicationStart();
+
+            //ApplicationFigure applicationFigure = new ApplicationFigure();
+            //applicationFigure.ApplicationStart();
         }
     }
 

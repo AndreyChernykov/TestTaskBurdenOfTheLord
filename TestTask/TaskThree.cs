@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace TestTask
+namespace TestTask.HashData
 {
     class ApplicationContactsDirectory //Task Three
     {
